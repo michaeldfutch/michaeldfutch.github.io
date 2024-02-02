@@ -3974,13 +3974,19 @@ newData.forEach(d => {
 
 // console.log("Print newData");
 console.log(newData);
+// Add a title to the page
+d3.select("body")
+    .append("h1")
+    .style("text-align", "center")
+    .text("Sawtooth Avalanche Center Observations 12/2022");
 
 // 3. Create a SVG container
 let svg = d3.select("body").append("svg")
     .attr("width", window.innerWidth)
     .attr("height", window.innerHeight)
     .append("g")
-    .attr("transform", `translate(${window.innerWidth / 2},${window.innerHeight / 2})`);
+    .attr("transform", `translate(${window.innerWidth / 2},${window.innerHeight / 2 -50})`);
+
 
 // 4. Define the scale for the radial graph
 let rScale = d3.scaleLinear()
@@ -4199,7 +4205,7 @@ sizeLegend.append("text")
 let dropdown = d3.select("body").append("select")
     .style("position", "absolute")
     .style("left", "50%")
-    .style("top", "50px")
+    .style("top", "100px")
     .style("transform", "translate(-50%, 0)");
 
 dropdown.selectAll("option")
