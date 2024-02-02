@@ -4038,7 +4038,7 @@ let tip = d3.tip()
     .style('padding', '10px')
     .offset([-10, 0])
     .html(function(d) {
-        return `id: ${d.id}<br>obs id: ${d.avyNum}/${d.count}<br>date: ${d.date}<br>elevation: ${d.elevation}<br>aspect: ${d.aspect}<br>size: ${d.dSize}<br>trigger: ${d.trigger}<br>mountain: ${d.mountain}<br><a href="${d.url}" target="_blank">url: ${d.url}</a>`;
+        return `id: ${d.id}<br>obs id: ${d.avyNum}/${d.number}<br>date: ${d.date}<br>elevation: ${d.elevation}<br>aspect: ${d.aspect}<br>size: ${d.dSize}<br>trigger: ${d.trigger}<br>Location: ${d.locationName}<br><a href="${d.url}" target="_blank">url: ${d.url}</a>`;
     });
 
 svg.call(tip);
